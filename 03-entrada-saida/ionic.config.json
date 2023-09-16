@@ -1,0 +1,7 @@
+{
+  "name": "03-entrada-saida",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
