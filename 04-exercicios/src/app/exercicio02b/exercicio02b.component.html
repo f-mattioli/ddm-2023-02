@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Exercício 02 (b)
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-input type="number" 
+      placeholder="N1" 
+      name="n1"
+      [(ngModel)]="n1"></ion-input>
+
+    <ion-input type="number" 
+      placeholder="N2" 
+      name="n2"
+      [(ngModel)]="n2"></ion-input>
+
+    <ion-list>
+      <ion-item>
+        <ion-select label="Operação" 
+          placeholder="Operação"
+          name="operacao"
+          [(ngModel)]="operacao">
+
+          <ion-select-option value="soma">Soma</ion-select-option>
+          <ion-select-option value="sub">Subtração</ion-select-option>
+          <ion-select-option value="mult">Multiplicação</ion-select-option>
+          <ion-select-option value="div">Divisão</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-button (click)="calcula()">Calcular</ion-button>
+  </form>
+
+  <strong>{{saida}}</strong>
+</ion-content>
