@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Des. para Disp. Móveis
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Des. para Disp. Móveis</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <h4>Aula 05 - APIs REST</h4>
+
+    <form (ngSubmit)="pesquisa()">
+      <ion-input type="text" placeholder="Nome do repositório:"
+        name="nome" [(ngModel)]="nome"></ion-input>
+      <ion-button type="submit">Enviar</ion-button>
+
+      <ion-list *ngFor="let r of repositorios; let i = index" no-lines>
+        <ion-item>
+        ID: {{ r.id }} -Nome: {{ r.name }} -URL: {{ r.html_url }}
+        </ion-item>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>
